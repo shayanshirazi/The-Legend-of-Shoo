@@ -1,0 +1,118 @@
+[gd_scene load_steps=12 format=3 uid="uid://bijqo67r3oau1"]
+
+[ext_resource type="Texture2D" uid="uid://dx35we2jw7ggk" path="res://Assets/Bomb.png" id="1_1eqbi"]
+[ext_resource type="Script" path="res://Scripts/bomb.gd" id="1_ehqeg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bnmga"]
+atlas = ExtResource("1_1eqbi")
+region = Rect2(0, 0, 922, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ieae"]
+atlas = ExtResource("1_1eqbi")
+region = Rect2(922, 800, 922, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_02v6a"]
+atlas = ExtResource("1_1eqbi")
+region = Rect2(0, 800, 922, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_db8w4"]
+atlas = ExtResource("1_1eqbi")
+region = Rect2(922, 0, 922, 800)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eflw1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bnmga")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ieae")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_02v6a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_db8w4")
+}],
+"loop": false,
+"name": &"default",
+"speed": 16.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_036xn"]
+radius = 13.0
+
+[sub_resource type="Animation" id="Animation_w3kxc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ajbck"]
+resource_name = "falling"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.28319]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fabgs"]
+_data = {
+"RESET": SubResource("Animation_w3kxc"),
+"falling": SubResource("Animation_ajbck")
+}
+
+[node name="Bomb" type="Area2D"]
+z_index = 200
+collision_layer = 0
+collision_mask = 3
+script = ExtResource("1_ehqeg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(8, 5.96046e-08)
+scale = Vector2(0.0475, 0.0475)
+sprite_frames = SubResource("SpriteFrames_eflw1")
+autoplay = "default"
+frame = 3
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_036xn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(8.20488, -1.4375)
+scale = Vector2(0.0432441, 0.0432441)
+texture = ExtResource("1_1eqbi")
+region_enabled = true
+region_rect = Rect2(0, 0, 937.094, 766.531)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_fabgs")
+}
+autoplay = "falling"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.25
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

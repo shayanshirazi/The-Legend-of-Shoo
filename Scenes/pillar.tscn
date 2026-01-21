@@ -1,0 +1,115 @@
+[gd_scene load_steps=5 format=3 uid="uid://fiqhwhcrwwsa"]
+
+[ext_resource type="Texture2D" uid="uid://dduosbfnllddm" path="res://Assets/Pillars.png" id="1_8sbaa"]
+[ext_resource type="Script" path="res://Scripts/pillar.gd" id="1_cctoe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_03wx6"]
+size = Vector2(231, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_38ab5"]
+size = Vector2(214, 1721.5)
+
+[node name="Pillar" type="AnimatableBody2D"]
+script = ExtResource("1_cctoe")
+
+[node name="CollisionDetector" type="Area2D" parent="."]
+position = Vector2(-60, -109)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionDetector"]
+position = Vector2(44.5, -773)
+shape = SubResource("RectangleShape2D_03wx6")
+
+[node name="Collision1" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-13.5, -8.25)
+shape = SubResource("RectangleShape2D_38ab5")
+
+[node name="Face1" type="Node2D" parent="."]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Face1"]
+position = Vector2(-8, -432.949)
+scale = Vector2(0.212052, 0.212052)
+texture = ExtResource("1_8sbaa")
+region_enabled = true
+region_rect = Rect2(4779.42, 332.892, 1311.95, 4207.24)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Face1"]
+position = Vector2(-8, 439.051)
+scale = Vector2(0.212052, 0.212052)
+texture = ExtResource("1_8sbaa")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(4779.42, 332.892, 1311.95, 4207.24)
+
+[node name="Collision2" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-3.5, 5)
+shape = SubResource("RectangleShape2D_38ab5")
+disabled = true
+
+[node name="Face2" type="Node2D" parent="."]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Face2"]
+position = Vector2(0, -432.949)
+scale = Vector2(0.212052, 0.212052)
+texture = ExtResource("1_8sbaa")
+region_enabled = true
+region_rect = Rect2(6820.16, 399.124, 1283.16, 4123.47)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Face2"]
+position = Vector2(0, 436)
+scale = Vector2(0.212052, 0.212052)
+texture = ExtResource("1_8sbaa")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(6820.16, 399.124, 1283.16, 4123.47)
+
+[node name="Collision3" type="CollisionShape2D" parent="."]
+position = Vector2(-5.5, 12.5)
+shape = SubResource("RectangleShape2D_38ab5")
+disabled = true
+
+[node name="Face3" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Face3"]
+position = Vector2(0, -432.949)
+scale = Vector2(0.212052, 0.212052)
+texture = ExtResource("1_8sbaa")
+region_enabled = true
+region_rect = Rect2(2543.64, 261.51, 1282.86, 4253.41)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Face3"]
+position = Vector2(0, 466)
+scale = Vector2(0.212052, 0.212052)
+texture = ExtResource("1_8sbaa")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(2543.64, 261.51, 1282.86, 4253.41)
+
+[node name="Collision4" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-4, 1.75)
+shape = SubResource("RectangleShape2D_38ab5")
+disabled = true
+
+[node name="Face4" type="Node2D" parent="."]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Face4"]
+position = Vector2(0, -432.949)
+scale = Vector2(0.212052, 0.212052)
+texture = ExtResource("1_8sbaa")
+region_enabled = true
+region_rect = Rect2(419.25, 490.554, 1211.86, 4043.68)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Face4"]
+position = Vector2(0, 414)
+scale = Vector2(0.212052, 0.212052)
+texture = ExtResource("1_8sbaa")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(419.25, 490.554, 1211.86, 4043.68)
+
+[connection signal="body_entered" from="CollisionDetector" to="." method="_on_collision_detector_body_entered"]

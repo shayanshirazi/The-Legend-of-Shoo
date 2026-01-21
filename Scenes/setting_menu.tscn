@@ -1,0 +1,149 @@
+[gd_scene load_steps=12 format=3 uid="uid://x0ur5ms7ox3y"]
+
+[ext_resource type="Script" path="res://Scripts/pause_menu.gd" id="1_7vlbk"]
+[ext_resource type="Shader" path="res://Scripts/menu_background.gdshader" id="2_5yrvg"]
+[ext_resource type="Texture2D" uid="uid://bbn36fcxqcv8t" path="res://Assets/Menu/power_button.png" id="3_1lktg"]
+[ext_resource type="Texture2D" uid="uid://cdaixbas870a" path="res://Assets/Menu/resume_button.png" id="4_ba154"]
+[ext_resource type="Texture2D" uid="uid://iwlgq2bn6rjk" path="res://Assets/Menu/rotate_button.png" id="5_mwtp5"]
+[ext_resource type="Texture2D" uid="uid://cna30q2y6pwa0" path="res://Assets/Menu/mute_button.png" id="6_6wy23"]
+[ext_resource type="Texture2D" uid="uid://b24wyq6b67461" path="res://Assets/Menu/unmute_button.png" id="7_1p5lc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ty0dv"]
+shader = ExtResource("2_5yrvg")
+shader_parameter/lod = 0.0
+
+[sub_resource type="Animation" id="Animation_q3411"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_63pk7"]
+resource_name = "blur"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_84pq5"]
+_data = {
+"RESET": SubResource("Animation_q3411"),
+"blur": SubResource("Animation_63pk7")
+}
+
+[node name="SettingMenu" type="Control"]
+process_mode = 3
+modulate = Color(1, 1, 1, 0)
+z_index = 1000
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7vlbk")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_ty0dv")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_84pq5")
+}
+
+[node name="Buttons" type="Node2D" parent="."]
+
+[node name="Quit" type="TextureButton" parent="Buttons"]
+z_index = 999
+offset_left = 13.0
+offset_top = 174.0
+offset_right = 525.0
+offset_bottom = 686.0
+scale = Vector2(0.07, 0.07)
+texture_normal = ExtResource("3_1lktg")
+stretch_mode = 4
+
+[node name="Resume" type="TextureButton" parent="Buttons"]
+z_index = 999
+offset_left = 12.0
+offset_top = 52.0
+offset_right = 524.0
+offset_bottom = 564.0
+scale = Vector2(0.07, 0.07)
+texture_normal = ExtResource("4_ba154")
+stretch_mode = 4
+
+[node name="Restart" type="TextureButton" parent="Buttons"]
+z_index = 999
+offset_left = 10.0
+offset_top = 130.0
+offset_right = 522.0
+offset_bottom = 642.0
+scale = Vector2(0.08, 0.08)
+texture_normal = ExtResource("5_mwtp5")
+stretch_mode = 4
+
+[node name="Sound" type="TextureButton" parent="Buttons"]
+z_index = 999
+offset_left = 12.0
+offset_top = 92.0
+offset_right = 524.0
+offset_bottom = 604.0
+scale = Vector2(0.07, 0.07)
+toggle_mode = true
+texture_normal = ExtResource("6_6wy23")
+texture_pressed = ExtResource("7_1p5lc")
+stretch_mode = 4
+
+[connection signal="pressed" from="Buttons/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Buttons/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Buttons/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Buttons/Sound" to="." method="_on_sound_pressed"]

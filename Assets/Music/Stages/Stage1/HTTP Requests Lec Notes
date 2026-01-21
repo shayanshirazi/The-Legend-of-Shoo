@@ -1,0 +1,119 @@
+# Lesson: Making HTTP Calls Using the `requests` Library in Python
+
+# In this lesson, we will learn how to make HTTP calls using the `requests` library in Python.
+# We will use the Typicode JSONPlaceholder API for our examples.
+
+# Prerequisites:
+# - Python installed on your machine
+# - Basic understanding of Python programming
+
+# Step 1: Install the `requests` Library
+# First, you need to install the `requests` library if you haven't already. You can do this using pip:
+# pip install requests
+
+import requests
+
+# Step 2: Making a GET Request
+def get_posts():
+    # URL for the JSONPlaceholder API
+    url = "https://jsonplaceholder.typicode.com/posts"
+
+    # Making a GET request
+    response = requests.get(url)
+
+   
+    print(response.content)
+    print(response.status_code)
+    # Checking the status code of the response
+    if response.status_code == 200:
+        # Parsing the JSON response
+        posts = response.json()
+        # Printing the first post
+        print("GET Request - First Post:")
+        print(posts[0])
+    else:
+        print(f"Failed to retrieve posts. Status code: {response.status_code}")
+
+# Step 3: Making a POST Request
+def create_post():
+    # URL for the JSONPlaceholder API
+    url = "https://jsonplaceholder.typicode.com/posts"
+
+    # Data to be sent in the POST request
+    data = {
+        "title": "foo",
+        "body": "bar",
+        "userId": 1
+    }  
+
+    
+    #JSON DATA 
+
+    # Making a POST request
+    response = requests.post(url, json=data)
+    print(response.content,"heyyyyyyyyyyyyyyyyy")
+    # Checking the status code of the response
+    if response.status_code == 201:
+        # Parsing the JSON response
+        new_post = response.json()
+        # Printing the new post
+        print("POST Request - New Post:")
+        print(new_post)
+    else:
+        print(f"Failed to create post. Status code: {response.status_code}")
+
+# Step 4: Making a PUT Request
+def update_post():
+    # URL for the JSONPlaceholder API
+    url = "https://jsonplaceholder.typicode.com/posts/1"
+
+    # Data to be sent in the PUT request
+    data = {
+        "id": 1,
+        "title": "foo",
+        "body": "bar",
+        "userId": 1
+    }
+
+    # Making a PUT request
+    response = requests.put(url, json=data)
+
+    # Checking the status code of the response
+    if response.status_code == 200:
+        # Parsing the JSON response
+        updated_post = response.json()
+        # Printing the updated post
+        print("PUT Request - Updated Post:")
+        print(updated_post)
+    else:
+        print(f"Failed to update post. Status code: {response.status_code}")
+
+# Step 5: Making a DELETE Request
+def delete_post():
+    # URL for the JSONPlaceholder API
+    url = "https://jsonplaceholder.typicode.com/posts/1"
+
+    # Making a DELETE request
+    response = requests.delete(url)
+
+    # Checking the status code of the response
+    if response.status_code == 200:
+        print("DELETE Request - Post deleted successfully.")
+    else:
+        print(f"Failed to delete post. Status code: {response.status_code}")
+
+# Running all the functions
+if __name__ == "__main__":
+    get_posts()
+    create_post()
+    update_post()
+    delete_post()
+
+
+
+# pick a free api from https://apilist.fun/ and make a get request to it using requests library and print the data
+
+
+response = requests.get("https://valorant.com")
+
+print(response.content)

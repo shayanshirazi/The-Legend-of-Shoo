@@ -1,0 +1,950 @@
+[gd_scene load_steps=101 format=3 uid="uid://vvrxifwge2lv"]
+
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_ayxar"]
+[ext_resource type="PackedScene" uid="uid://stwly0r8qysy" path="res://Scenes/player.tscn" id="2_ipwd4"]
+[ext_resource type="Texture2D" uid="uid://vcei22v0sxj5" path="res://Assets/Backgrounds/city 1/1.png" id="3_68tr3"]
+[ext_resource type="Texture2D" uid="uid://de1p3vv1v11l0" path="res://Assets/Backgrounds/city 2/1.png" id="3_ari40"]
+[ext_resource type="Texture2D" uid="uid://bepehc2ydki47" path="res://Assets/Backgrounds/city 3/1.png" id="3_h7cpy"]
+[ext_resource type="Texture2D" uid="uid://dtjowek4bm570" path="res://Assets/Backgrounds/city 2/2.png" id="4_2w6w4"]
+[ext_resource type="Texture2D" uid="uid://haksu0tf522c" path="res://Assets/Backgrounds/city 1/2.png" id="4_hdfda"]
+[ext_resource type="Texture2D" uid="uid://dvklfue86sw41" path="res://Assets/Backgrounds/city 3/2.png" id="4_l2mte"]
+[ext_resource type="Texture2D" uid="uid://cvnjxn1e1w6s0" path="res://Assets/Backgrounds/city 1/3.png" id="5_47uqx"]
+[ext_resource type="Texture2D" uid="uid://bb3ke4sdlidob" path="res://Assets/Backgrounds/city 2/3.png" id="5_gn8vi"]
+[ext_resource type="Texture2D" uid="uid://dxpcpkxm18rnf" path="res://Assets/Backgrounds/city 3/3.png" id="5_nbis4"]
+[ext_resource type="Texture2D" uid="uid://d141v2ws4tbts" path="res://Assets/Backgrounds/city 3/4.png" id="6_htypc"]
+[ext_resource type="Texture2D" uid="uid://bj7f30l4r0nh3" path="res://Assets/Backgrounds/city 2/4.png" id="6_n7tvp"]
+[ext_resource type="Texture2D" uid="uid://cbcipr07bk8vs" path="res://Assets/Backgrounds/city 1/4.png" id="6_q6o30"]
+[ext_resource type="Texture2D" uid="uid://byjjex1swue4m" path="res://Assets/Backgrounds/city 2/5.png" id="7_3d1t5"]
+[ext_resource type="Texture2D" uid="uid://ge6p326j7w3f" path="res://Assets/Backgrounds/city 1/5.png" id="7_53mqv"]
+[ext_resource type="Texture2D" uid="uid://bathpvddvrcbb" path="res://Assets/Backgrounds/city 3/5.png" id="7_xnoun"]
+[ext_resource type="Texture2D" uid="uid://c8dmmuyo7u5o1" path="res://Assets/Backgrounds/city 5/1.png" id="8_2nfne"]
+[ext_resource type="Texture2D" uid="uid://cx6jv8i3fn8sk" path="res://Assets/Backgrounds/city 4/1.png" id="8_4hbas"]
+[ext_resource type="Texture2D" uid="uid://bkedraa1j3xit" path="res://Assets/Backgrounds/city 2/6.png" id="8_bieqk"]
+[ext_resource type="Texture2D" uid="uid://dpewnjw0kaftt" path="res://Assets/Backgrounds/city 6/1.png" id="8_le5ot"]
+[ext_resource type="Texture2D" uid="uid://dexqc8s0jq4gn" path="res://Assets/Backgrounds/city 5/2.png" id="9_h5j5u"]
+[ext_resource type="Texture2D" uid="uid://b55w4tfqaq645" path="res://Assets/Backgrounds/city 4/2.png" id="9_irmio"]
+[ext_resource type="Texture2D" uid="uid://di83pm7weelf7" path="res://Assets/Backgrounds/city 6/2.png" id="9_xymkb"]
+[ext_resource type="Texture2D" uid="uid://b4iqkmv28r6tl" path="res://Assets/Backgrounds/city 6/3.png" id="10_6ae4b"]
+[ext_resource type="Texture2D" uid="uid://dpcf4v8nqqle7" path="res://Assets/Backgrounds/city 5/3.png" id="10_sj1w3"]
+[ext_resource type="Texture2D" uid="uid://c2y5pxi1mdh52" path="res://Assets/Backgrounds/city 4/3.png" id="10_tnssd"]
+[ext_resource type="Texture2D" uid="uid://ca27mq0ixycaj" path="res://Assets/Backgrounds/city 5/4.png" id="11_6ck1h"]
+[ext_resource type="Texture2D" uid="uid://bw43mbrshueec" path="res://Assets/Backgrounds/city 6/4.png" id="11_cjfjy"]
+[ext_resource type="Texture2D" uid="uid://bne8xc2lx5bmp" path="res://Assets/Backgrounds/city 4/4.png" id="11_mmw1k"]
+[ext_resource type="Texture2D" uid="uid://1vd84abyftq5" path="res://Assets/Backgrounds/city 6/5.png" id="12_5gd5k"]
+[ext_resource type="Texture2D" uid="uid://bcs8an6cwl7ph" path="res://Assets/Backgrounds/city 4/5.png" id="12_5oifu"]
+[ext_resource type="Texture2D" uid="uid://yg8fq3pr1ofp" path="res://Assets/Backgrounds/city 5/5.png" id="12_sno6r"]
+[ext_resource type="Texture2D" uid="uid://b6uf6kx31rnc6" path="res://Assets/Backgrounds/city 6/6.png" id="13_6caxe"]
+[ext_resource type="Texture2D" uid="uid://cld5lho4rxjv2" path="res://Assets/Backgrounds/city 4/7.png" id="13_o6wdm"]
+[ext_resource type="Texture2D" uid="uid://etp65rd8x1tp" path="res://Assets/Backgrounds/city 7/1.png" id="25_70idb"]
+[ext_resource type="Texture2D" uid="uid://bfp2dgxxfsvvp" path="res://Assets/Backgrounds/city 7/2.png" id="26_pwx01"]
+[ext_resource type="Texture2D" uid="uid://chrarabvi0rae" path="res://Assets/Backgrounds/city 7/3.png" id="27_qx1xu"]
+[ext_resource type="Texture2D" uid="uid://by4ky2trlb0w1" path="res://Assets/Backgrounds/city 7/4.png" id="28_bhyce"]
+[ext_resource type="Texture2D" uid="uid://b08ih7bwkmfka" path="res://Assets/Backgrounds/city 7/5.png" id="29_f6v1f"]
+[ext_resource type="Texture2D" uid="uid://c60nq61nxxels" path="res://Assets/Backgrounds/city 8/1.png" id="30_yiwgq"]
+[ext_resource type="Texture2D" uid="uid://bilg00ima8kl3" path="res://Assets/Backgrounds/city 8/2.png" id="31_wgc2i"]
+[ext_resource type="Texture2D" uid="uid://xqgul115p1ml" path="res://Assets/Backgrounds/city 8/3.png" id="32_rj4xv"]
+[ext_resource type="Texture2D" uid="uid://cduiymctboi22" path="res://Assets/Backgrounds/city 8/4.png" id="33_hw2ba"]
+[ext_resource type="Texture2D" uid="uid://cp3m0gelqyn2x" path="res://Assets/Backgrounds/city 8/5.png" id="34_yo2k5"]
+[ext_resource type="PackedScene" uid="uid://fiqhwhcrwwsa" path="res://Scenes/pillar.tscn" id="46_7sjbu"]
+[ext_resource type="PackedScene" uid="uid://rhdmeawjd6xl" path="res://Scenes/explosion.tscn" id="46_1318g"]
+[ext_resource type="Script" path="res://Scripts/camera.gd" id="47_7566p"]
+[ext_resource type="PackedScene" uid="uid://omof3loo3x1j" path="res://Scenes/killzone.tscn" id="47_bkmf4"]
+[ext_resource type="Script" path="res://Scripts/menu.gd" id="49_ov3np"]
+[ext_resource type="PackedScene" uid="uid://x0ur5ms7ox3y" path="res://Scenes/setting_menu.tscn" id="49_rgvyo"]
+[ext_resource type="Texture2D" uid="uid://cn00d2tte4det" path="res://Assets/Menu/setting.png" id="50_rsckm"]
+[ext_resource type="PackedScene" uid="uid://dd5x6kgde7pqo" path="res://Scenes/game_over.tscn" id="52_p4o4l"]
+[ext_resource type="FontFile" uid="uid://dvhuitwjsd3ow" path="res://Fonts/JungleAdventurer.ttf" id="54_f7vb4"]
+[ext_resource type="AudioStream" uid="uid://bcbjo3kfjisj7" path="res://Assets/Music/background_music_1.mp3" id="54_pxkth"]
+[ext_resource type="AudioStream" uid="uid://dflhjyvrx34yn" path="res://Assets/Music/background_music_2.mp3" id="55_mfmwd"]
+[ext_resource type="AudioStream" uid="uid://c03y021plwb6t" path="res://Assets/Music/background_music_3.mp3" id="56_w3anm"]
+[ext_resource type="AudioStream" uid="uid://bs6eafosgdfsc" path="res://Assets/Music/background_music_4.mp3" id="57_j3ucb"]
+[ext_resource type="AudioStream" uid="uid://bqax8a2ourup1" path="res://Assets/Music/background_music_5.mp3" id="58_xyyp0"]
+[ext_resource type="AudioStream" uid="uid://bw11gwdg3w4vt" path="res://Assets/Music/background_music_6.mp3" id="59_64711"]
+[ext_resource type="AudioStream" uid="uid://do144iuvedf7e" path="res://Assets/Music/background_music_7.mp3" id="60_m1ngg"]
+[ext_resource type="AudioStream" uid="uid://ca764p3bdkids" path="res://Assets/Music/background_music_8.mp3" id="61_xgt5i"]
+[ext_resource type="AudioStream" uid="uid://cfej3xhu8fngl" path="res://Assets/Music/Stages/Stage1/Stage1.wav" id="62_0dejy"]
+[ext_resource type="AudioStream" uid="uid://cmr5v657f3up8" path="res://Assets/Music/Stages/Stage1/echos_of_origin.wav" id="63_n0vui"]
+[ext_resource type="AudioStream" uid="uid://buhb2pcy1ekso" path="res://Assets/Music/Stages/Stage1/new_horizons.wav" id="64_lok85"]
+[ext_resource type="AudioStream" uid="uid://ir38b7hqx0km" path="res://Assets/Music/Stages/Stage1/prelude_to_destruction.wav" id="65_0foht"]
+[ext_resource type="AudioStream" uid="uid://u0ugep4wbctv" path="res://Assets/Music/Stages/Stage1/the_first_light.wav" id="66_gqnme"]
+[ext_resource type="AudioStream" uid="uid://dphnogalxkxh3" path="res://Assets/Music/Stages/Stage1/unseen_forces.wav" id="67_lh6yw"]
+[ext_resource type="AudioStream" uid="uid://doryq3tawlu0q" path="res://Assets/Music/Stages/Stage2/Stage2.wav" id="68_4fesv"]
+[ext_resource type="AudioStream" uid="uid://cr0u6sn3vutwk" path="res://Assets/Music/Stages/Stage2/crushing_earth.wav" id="69_k7dd7"]
+[ext_resource type="AudioStream" uid="uid://bqcnt58u04wdq" path="res://Assets/Music/Stages/Stage2/stonebound_path.wav" id="70_dk521"]
+[ext_resource type="AudioStream" uid="uid://o8g8wxv5idpo" path="res://Assets/Music/Stages/Stage2/stoneheart_rise.wav" id="71_xs5ub"]
+[ext_resource type="AudioStream" uid="uid://de88qtuej12bg" path="res://Assets/Music/Stages/Stage2/the_shifting_rock.wav" id="72_b5m3f"]
+[ext_resource type="AudioStream" uid="uid://dmq5r72by5qtg" path="res://Assets/Music/Stages/Stage2/veins_of_iron.wav" id="73_gi4kp"]
+[ext_resource type="AudioStream" uid="uid://d1v78dugq7ekf" path="res://Assets/Music/Stages/Stage3/Stage3.wav" id="74_gwpca"]
+[ext_resource type="AudioStream" uid="uid://tmriskj7pjjs" path="res://Assets/Music/Stages/Stage3/countdown_to_oblivion.wav" id="75_nrkp4"]
+[ext_resource type="AudioStream" uid="uid://bm2ho7i5dcb7o" path="res://Assets/Music/Stages/Stage3/missles_fury.wav" id="76_xxsqt"]
+[ext_resource type="AudioStream" uid="uid://bimu5mbjkauq8" path="res://Assets/Music/Stages/Stage3/missle_barrage.wav" id="77_rpr4j"]
+[ext_resource type="AudioStream" uid="uid://6o3l7lrfae8m" path="res://Assets/Music/Stages/Stage3/skyfire_assult.wav" id="78_sdv4n"]
+[ext_resource type="AudioStream" uid="uid://d3nb6sqobkm25" path="res://Assets/Music/Stages/Stage3/the_iron_skies.wav" id="79_cla3r"]
+[ext_resource type="AudioStream" uid="uid://sx1lh3p75phb" path="res://Assets/Music/Stages/Stage4/Stage4.wav" id="80_vcalb"]
+[ext_resource type="AudioStream" uid="uid://bxcb6l58okiqy" path="res://Assets/Music/Stages/Stage4/cataclysm_unleashed.wav" id="81_o5mdd"]
+[ext_resource type="AudioStream" uid="uid://dgq8p5roywlut" path="res://Assets/Music/Stages/Stage4/infernos_grasp.wav" id="82_4du4c"]
+[ext_resource type="AudioStream" uid="uid://cbff3y5ipn7ra" path="res://Assets/Music/Stages/Stage4/the_big_bang.wav" id="83_5csof"]
+[ext_resource type="AudioStream" uid="uid://d2vmw6jribrvy" path="res://Assets/Music/Stages/Stage4/the_final_detonation.wav" id="84_5sv1k"]
+[ext_resource type="AudioStream" uid="uid://brv5myi41r0sb" path="res://Assets/Music/Stages/Stage4/the_last_blast.wav" id="85_bcvvv"]
+[ext_resource type="AudioStream" uid="uid://co0d3y2ij11gb" path="res://Assets/Music/bomb_fall_1.mp3" id="86_mnik1"]
+[ext_resource type="AudioStream" uid="uid://cl3skc0urn222" path="res://Assets/Music/bomb_fall_2.mp3" id="87_qah0m"]
+[ext_resource type="AudioStream" uid="uid://37af1108epou" path="res://Assets/Music/bomb_explosion_1.mp3" id="88_sep0u"]
+[ext_resource type="AudioStream" uid="uid://cityt8aq0am80" path="res://Assets/Music/bomb_explosion_2.mp3" id="89_esujs"]
+[ext_resource type="AudioStream" uid="uid://bepkfee54qjnu" path="res://Assets/Music/missle_coming.mp3" id="90_tlhw6"]
+[ext_resource type="AudioStream" uid="uid://cjp4dh44g3obk" path="res://Assets/Music/stone_hit.mp3" id="91_4g4ur"]
+[ext_resource type="AudioStream" uid="uid://bjx48l7kisf7w" path="res://Assets/Music/inc_score.mp3" id="92_k4rbn"]
+[ext_resource type="AudioStream" uid="uid://c42hnib8cnalr" path="res://Assets/Music/inc_score_2.mp3" id="93_8pra0"]
+[ext_resource type="AudioStream" uid="uid://dnkf6a7eo6vnw" path="res://Assets/Music/button_click.mp3" id="93_s23e3"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_bvx6r"]
+normal = Vector2(1, 0)
+distance = -41.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_as6nc"]
+distance = -411.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_npnl1"]
+distance = 96.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pbo8q"]
+bg_color = Color(0.247059, 0.247059, 0.247059, 0.482353)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_giv7r"]
+bg_color = Color(0.196078, 0.803922, 0.196078, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="main" type="Node2D"]
+position = Vector2(0, 648)
+script = ExtResource("1_ayxar")
+
+[node name="Cities" type="Node" parent="."]
+
+[node name="City1" type="ParallaxBackground" parent="Cities"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Cities/City1"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City1/ParallaxLayer"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("3_68tr3")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Cities/City1"]
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City1/ParallaxLayer2"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("4_hdfda")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Cities/City1"]
+motion_scale = Vector2(0.7, 0.7)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City1/ParallaxLayer3"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("5_47uqx")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="Cities/City1"]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City1/ParallaxLayer4"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("6_q6o30")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="Cities/City1"]
+motion_scale = Vector2(0.9, 0.9)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City1/ParallaxLayer5"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("7_53mqv")
+
+[node name="Polygon2D" type="Polygon2D" parent="Cities/City1/ParallaxLayer5"]
+position = Vector2(631, 935)
+scale = Vector2(0.904572, 0.982356)
+color = Color(0.0627451, 0.0509804, 0.145098, 1)
+polygon = PackedVector2Array(-700.884, -300.299, -696.462, 172.036, 583.701, 173.053, 576.971, -256.158, 576.889, -300.102)
+
+[node name="City2" type="ParallaxBackground" parent="Cities"]
+visible = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Cities/City2"]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City2/ParallaxLayer"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("3_ari40")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Cities/City2"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City2/ParallaxLayer2"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("4_2w6w4")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Cities/City2"]
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City2/ParallaxLayer3"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("5_gn8vi")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="Cities/City2"]
+motion_scale = Vector2(0.7, 0.7)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City2/ParallaxLayer4"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("6_n7tvp")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="Cities/City2"]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City2/ParallaxLayer5"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("7_3d1t5")
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="Cities/City2"]
+motion_scale = Vector2(0.9, 0.9)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City2/ParallaxLayer6"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("8_bieqk")
+
+[node name="Polygon2D" type="Polygon2D" parent="Cities/City2/ParallaxLayer6"]
+position = Vector2(631, 935)
+scale = Vector2(0.904572, 0.982356)
+color = Color(0.00784314, 0.0862745, 0.109804, 1)
+polygon = PackedVector2Array(-700.884, -300.299, -696.462, 172.036, 583.701, 173.053, 576.971, -256.158, 576.889, -300.102)
+
+[node name="City3" type="ParallaxBackground" parent="Cities"]
+visible = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Cities/City3"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City3/ParallaxLayer"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("3_h7cpy")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Cities/City3"]
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City3/ParallaxLayer2"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("4_l2mte")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Cities/City3"]
+motion_scale = Vector2(0.7, 0.7)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City3/ParallaxLayer3"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("5_nbis4")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="Cities/City3"]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City3/ParallaxLayer4"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("6_htypc")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="Cities/City3"]
+motion_scale = Vector2(0.9, 0.9)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City3/ParallaxLayer5"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("7_xnoun")
+
+[node name="Polygon2D" type="Polygon2D" parent="Cities/City3/ParallaxLayer5"]
+position = Vector2(631, 935)
+scale = Vector2(0.904572, 0.982356)
+color = Color(0.00784314, 0.0862745, 0.109804, 1)
+polygon = PackedVector2Array(-700.884, -300.299, -696.462, 172.036, 583.701, 173.053, 576.971, -256.158, 576.889, -300.102)
+
+[node name="City4" type="ParallaxBackground" parent="Cities"]
+visible = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Cities/City4"]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City4/ParallaxLayer"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("8_4hbas")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Cities/City4"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City4/ParallaxLayer2"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("9_irmio")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Cities/City4"]
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City4/ParallaxLayer3"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("10_tnssd")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="Cities/City4"]
+motion_scale = Vector2(0.7, 0.7)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City4/ParallaxLayer4"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("11_mmw1k")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="Cities/City4"]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City4/ParallaxLayer5"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("12_5oifu")
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="Cities/City4"]
+motion_scale = Vector2(0.9, 0.9)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City4/ParallaxLayer6"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("13_o6wdm")
+
+[node name="Polygon2D" type="Polygon2D" parent="Cities/City4/ParallaxLayer6"]
+position = Vector2(631, 935)
+scale = Vector2(0.904572, 0.982356)
+color = Color(0.129412, 0.0784314, 0.0784314, 1)
+polygon = PackedVector2Array(-700.884, -300.299, -696.462, 172.036, 583.701, 173.053, 576.971, -256.158, 576.889, -300.102)
+
+[node name="City5" type="ParallaxBackground" parent="Cities"]
+visible = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Cities/City5"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City5/ParallaxLayer"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("8_2nfne")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Cities/City5"]
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City5/ParallaxLayer2"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("9_h5j5u")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Cities/City5"]
+motion_scale = Vector2(0.7, 0.7)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City5/ParallaxLayer3"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("10_sj1w3")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="Cities/City5"]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City5/ParallaxLayer4"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("11_6ck1h")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="Cities/City5"]
+motion_scale = Vector2(0.9, 0.9)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City5/ParallaxLayer5"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("12_sno6r")
+
+[node name="Polygon2D" type="Polygon2D" parent="Cities/City5/ParallaxLayer5"]
+position = Vector2(631, 935)
+scale = Vector2(0.904572, 0.982356)
+color = Color(0.12549, 0.0823529, 0.2, 1)
+polygon = PackedVector2Array(-700.884, -300.299, -696.462, 172.036, 583.701, 173.053, 576.971, -256.158, 576.889, -300.102)
+
+[node name="City6" type="ParallaxBackground" parent="Cities"]
+visible = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Cities/City6"]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City6/ParallaxLayer"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("8_le5ot")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Cities/City6"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City6/ParallaxLayer2"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("9_xymkb")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Cities/City6"]
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City6/ParallaxLayer3"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("10_6ae4b")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="Cities/City6"]
+motion_scale = Vector2(0.7, 0.7)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City6/ParallaxLayer4"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("11_cjfjy")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="Cities/City6"]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City6/ParallaxLayer5"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("12_5gd5k")
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="Cities/City6"]
+motion_scale = Vector2(0.9, 0.9)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City6/ParallaxLayer6"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("13_6caxe")
+
+[node name="Polygon2D" type="Polygon2D" parent="Cities/City6/ParallaxLayer6"]
+position = Vector2(631, 935)
+scale = Vector2(0.904572, 0.982356)
+color = Color(0.568627, 0.356863, 0.956863, 1)
+polygon = PackedVector2Array(-700.884, -300.299, -696.462, 172.036, 583.701, 173.053, 576.971, -256.158, 576.889, -300.102)
+
+[node name="City7" type="ParallaxBackground" parent="Cities"]
+visible = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Cities/City7"]
+z_index = -1
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City7/ParallaxLayer"]
+modulate = Color(1, 0.792157, 1, 1)
+z_index = -1
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("25_70idb")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Cities/City7"]
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City7/ParallaxLayer2"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("26_pwx01")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Cities/City7"]
+motion_scale = Vector2(0.7, 0.7)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City7/ParallaxLayer3"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("27_qx1xu")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="Cities/City7"]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City7/ParallaxLayer4"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("28_bhyce")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="Cities/City7"]
+motion_scale = Vector2(0.9, 0.9)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City7/ParallaxLayer5"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("29_f6v1f")
+
+[node name="Polygon2D" type="Polygon2D" parent="Cities/City7/ParallaxLayer5"]
+position = Vector2(631, 935)
+scale = Vector2(0.904572, 0.982356)
+color = Color(0.14902, 0.0509804, 0.203922, 1)
+polygon = PackedVector2Array(-700.884, -300.299, -696.462, 172.036, 583.701, 173.053, 576.971, -256.158, 576.889, -300.102)
+
+[node name="City8" type="ParallaxBackground" parent="Cities"]
+visible = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Cities/City8"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City8/ParallaxLayer"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("30_yiwgq")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Cities/City8"]
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City8/ParallaxLayer2"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("31_wgc2i")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Cities/City8"]
+motion_scale = Vector2(0.7, 0.7)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City8/ParallaxLayer3"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("32_rj4xv")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="Cities/City8"]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City8/ParallaxLayer4"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("33_hw2ba")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="Cities/City8"]
+motion_scale = Vector2(0.9, 0.9)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Cities/City8/ParallaxLayer5"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("34_yo2k5")
+
+[node name="Polygon2D" type="Polygon2D" parent="Cities/City8/ParallaxLayer5"]
+position = Vector2(631, 935)
+scale = Vector2(0.904572, 0.982356)
+color = Color(0.12549, 0.0823529, 0.2, 1)
+polygon = PackedVector2Array(-700.884, -300.299, -696.462, 172.036, 583.701, 173.053, 576.971, -256.158, 576.889, -300.102)
+
+[node name="Player" parent="." instance=ExtResource("2_ipwd4")]
+unique_name_in_owner = true
+position = Vector2(130, -700)
+scale = Vector2(0.2, 0.2)
+
+[node name="Explosion" parent="Player" instance=ExtResource("46_1318g")]
+visible = false
+position = Vector2(18.416, -153.416)
+scale = Vector2(8.18552, 8.18552)
+frame = 6
+frame_progress = 0.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, -290)
+rotation = 3.14159
+scale = Vector2(1.56278, -0.155361)
+limit_top = 0
+limit_bottom = 648
+position_smoothing_enabled = true
+script = ExtResource("47_7566p")
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D"]
+modulate = Color(1, 1, 1, 0.592157)
+offset_left = -1109.24
+offset_top = -2882.11
+offset_right = 392.758
+offset_bottom = 5243.89
+color = Color(1, 1, 1, 0.470588)
+
+[node name="Walls" type="StaticBody2D" parent="."]
+position = Vector2(206, -177)
+collision_mask = 3
+
+[node name="Backwall" type="CollisionShape2D" parent="Walls"]
+visibility_layer = 3
+position = Vector2(-160, 4)
+shape = SubResource("WorldBoundaryShape2D_bvx6r")
+
+[node name="GroundWall" type="CollisionShape2D" parent="Walls"]
+position = Vector2(0, 26)
+shape = SubResource("WorldBoundaryShape2D_as6nc")
+
+[node name="StartingPillar" parent="." instance=ExtResource("46_7sjbu")]
+position = Vector2(144, -2)
+scale = Vector2(0.3, 0.3)
+
+[node name="Killzone" parent="." instance=ExtResource("47_bkmf4")]
+position = Vector2(481, 303)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(-177, -201)
+shape = SubResource("WorldBoundaryShape2D_npnl1")
+
+[node name="Menu" type="CanvasLayer" parent="."]
+script = ExtResource("49_ov3np")
+
+[node name="GameOver" parent="Menu" instance=ExtResource("52_p4o4l")]
+
+[node name="SettingMenu" parent="Menu" instance=ExtResource("49_rgvyo")]
+z_index = 1
+
+[node name="Resume" type="TextureButton" parent="Menu"]
+z_index = 1024
+z_as_relative = false
+offset_left = 12.0
+offset_top = 11.0
+offset_right = 524.0
+offset_bottom = 523.0
+scale = Vector2(0.07, 0.07)
+texture_normal = ExtResource("50_rsckm")
+stretch_mode = 4
+
+[node name="HealthBar" type="ProgressBar" parent="Menu"]
+z_index = 1024
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = -14.0
+offset_right = -11.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_pbo8q")
+theme_override_styles/fill = SubResource("StyleBoxFlat_giv7r")
+max_value = 1000.0
+value = 1000.0
+show_percentage = false
+
+[node name="ScoreBar" type="Label" parent="Menu"]
+z_index = 4096
+z_as_relative = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -129.0
+offset_right = 129.0
+offset_bottom = 68.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0.635497, 0.527897, 0.787995, 1)
+theme_override_constants/shadow_offset_x = -1
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("54_f7vb4")
+theme_override_font_sizes/font_size = 70
+text = "0"
+horizontal_alignment = 1
+
+[node name="BackgroundMusics" type="Node" parent="."]
+process_mode = 3
+
+[node name="Music1" type="AudioStreamPlayer2D" parent="BackgroundMusics"]
+position = Vector2(0, 648)
+stream = ExtResource("54_pxkth")
+max_distance = 1e+10
+bus = &"Music"
+
+[node name="Music2" type="AudioStreamPlayer2D" parent="BackgroundMusics"]
+position = Vector2(0, 648)
+stream = ExtResource("55_mfmwd")
+max_distance = 1e+10
+bus = &"Music"
+
+[node name="Music3" type="AudioStreamPlayer2D" parent="BackgroundMusics"]
+position = Vector2(0, 648)
+stream = ExtResource("56_w3anm")
+max_distance = 1e+10
+bus = &"Music"
+
+[node name="Music4" type="AudioStreamPlayer2D" parent="BackgroundMusics"]
+position = Vector2(0, 648)
+stream = ExtResource("57_j3ucb")
+max_distance = 1e+10
+bus = &"Music"
+
+[node name="Music5" type="AudioStreamPlayer2D" parent="BackgroundMusics"]
+position = Vector2(0, 648)
+stream = ExtResource("58_xyyp0")
+max_distance = 1e+10
+bus = &"Music"
+
+[node name="Music6" type="AudioStreamPlayer2D" parent="BackgroundMusics"]
+position = Vector2(0, 648)
+stream = ExtResource("59_64711")
+max_distance = 1e+10
+bus = &"Music"
+
+[node name="Music7" type="AudioStreamPlayer2D" parent="BackgroundMusics"]
+position = Vector2(0, 648)
+stream = ExtResource("60_m1ngg")
+max_distance = 1e+10
+bus = &"Music"
+
+[node name="Music8" type="AudioStreamPlayer2D" parent="BackgroundMusics"]
+position = Vector2(0, 648)
+stream = ExtResource("61_xgt5i")
+max_distance = 1e+10
+bus = &"Music"
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="StageOne" type="AudioStreamPlayer2D" parent="SFX"]
+position = Vector2(0, 648)
+stream = ExtResource("62_0dejy")
+max_distance = 1e+10
+bus = &"SFX"
+
+[node name="Stage1" type="Node" parent="SFX"]
+
+[node name="name1" type="AudioStreamPlayer2D" parent="SFX/Stage1"]
+stream = ExtResource("63_n0vui")
+max_distance = 1e+10
+bus = &"SFX"
+
+[node name="name2" type="AudioStreamPlayer2D" parent="SFX/Stage1"]
+stream = ExtResource("64_lok85")
+max_distance = 1e+10
+bus = &"SFX"
+
+[node name="name3" type="AudioStreamPlayer2D" parent="SFX/Stage1"]
+stream = ExtResource("65_0foht")
+max_distance = 1e+10
+bus = &"SFX"
+
+[node name="name4" type="AudioStreamPlayer2D" parent="SFX/Stage1"]
+stream = ExtResource("66_gqnme")
+max_distance = 1e+10
+bus = &"SFX"
+
+[node name="name5" type="AudioStreamPlayer2D" parent="SFX/Stage1"]
+stream = ExtResource("67_lh6yw")
+max_distance = 1e+10
+bus = &"SFX"
+
+[node name="StageTwo" type="AudioStreamPlayer2D" parent="SFX"]
+position = Vector2(0, 648)
+stream = ExtResource("68_4fesv")
+max_distance = 1e+10
+bus = &"SFX"
+
+[node name="Stage2" type="Node" parent="SFX"]
+
+[node name="name1" type="AudioStreamPlayer2D" parent="SFX/Stage2"]
+stream = ExtResource("69_k7dd7")
+max_distance = 1e+10
+bus = &"SFX"
+
+[node name="name2" type="AudioStreamPlayer2D" parent="SFX/Stage2"]
+stream = ExtResource("70_dk521")
+max_distance = 1e+10
+bus = &"SFX"
+
+[node name="name3" type="AudioStreamPlayer2D" parent="SFX/Stage2"]
+stream = ExtResource("71_xs5ub")
+max_distance = 1e+10
+bus = &"SFX"
+
+[node name="name4" type="AudioStreamPlayer2D" parent="SFX/Stage2"]
+stream = ExtResource("72_b5m3f")
+max_distance = 1e+10
+bus = &"SFX"
+
+[node name="name5" type="AudioStreamPlayer2D" parent="SFX/Stage2"]
+stream = ExtResource("73_gi4kp")
+max_distance = 1e+10
+bus = &"SFX"
+
+[node name="StageThree" type="AudioStreamPlayer2D" parent="SFX"]
+position = Vector2(0, 648)
+stream = ExtResource("74_gwpca")
+max_distance = 1e+10
+bus = &"SFX"
+
+[node name="Stage3" type="Node" parent="SFX"]
+
+[node name="name1" type="AudioStreamPlayer2D" parent="SFX/Stage3"]
+stream = ExtResource("75_nrkp4")
+max_distance = 1e+10
+bus = &"SFX"
+
+[node name="name2" type="AudioStreamPlayer2D" parent="SFX/Stage3"]
+stream = ExtResource("76_xxsqt")
+max_distance = 1e+10
+bus = &"SFX"
+
+[node name="name3" type="AudioStreamPlayer2D" parent="SFX/Stage3"]
+stream = ExtResource("77_rpr4j")
+max_distance = 1e+10
+bus = &"SFX"
+
+[node name="name4" type="AudioStreamPlayer2D" parent="SFX/Stage3"]
+stream = ExtResource("78_sdv4n")
+max_distance = 1e+10
+bus = &"SFX"
+
+[node name="name5" type="AudioStreamPlayer2D" parent="SFX/Stage3"]
+stream = ExtResource("79_cla3r")
+max_distance = 1e+10
+bus = &"SFX"
+
+[node name="StageFour" type="AudioStreamPlayer2D" parent="SFX"]
+position = Vector2(0, 648)
+stream = ExtResource("80_vcalb")
+max_distance = 1e+10
+bus = &"SFX"
+
+[node name="Stage4" type="Node" parent="SFX"]
+
+[node name="name1" type="AudioStreamPlayer2D" parent="SFX/Stage4"]
+stream = ExtResource("81_o5mdd")
+max_distance = 1e+10
+bus = &"SFX"
+
+[node name="name2" type="AudioStreamPlayer2D" parent="SFX/Stage4"]
+stream = ExtResource("82_4du4c")
+max_distance = 1e+10
+bus = &"SFX"
+
+[node name="name3" type="AudioStreamPlayer2D" parent="SFX/Stage4"]
+stream = ExtResource("83_5csof")
+max_distance = 1e+10
+bus = &"SFX"
+
+[node name="name4" type="AudioStreamPlayer2D" parent="SFX/Stage4"]
+stream = ExtResource("84_5sv1k")
+max_distance = 1e+10
+bus = &"SFX"
+
+[node name="name5" type="AudioStreamPlayer2D" parent="SFX/Stage4"]
+stream = ExtResource("85_bcvvv")
+max_distance = 1e+10
+bus = &"SFX"
+
+[node name="Timer" type="Timer" parent="SFX"]
+wait_time = 1.5
+
+[node name="Timer2" type="Timer" parent="SFX"]
+wait_time = 2.0
+
+[node name="BombFalling1" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("86_mnik1")
+volume_db = -30.0
+pitch_scale = 2.0
+max_distance = 1e+10
+bus = &"SFX"
+
+[node name="BombFalling2" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("87_qah0m")
+volume_db = -30.0
+pitch_scale = 3.0
+max_distance = 1e+10
+bus = &"SFX"
+
+[node name="BombExplosion1" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("88_sep0u")
+volume_db = -30.0
+pitch_scale = 1.5
+max_distance = 1e+10
+bus = &"SFX"
+
+[node name="BombExplosion2" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("89_esujs")
+volume_db = -30.0
+pitch_scale = 1.5
+max_distance = 1e+10
+bus = &"SFX"
+
+[node name="MissleOnTheWay" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("90_tlhw6")
+volume_db = -40.0
+pitch_scale = 0.2
+max_distance = 1e+10
+bus = &"SFX"
+
+[node name="StoneHit" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("91_4g4ur")
+volume_db = -30.0
+max_distance = 1e+10
+bus = &"SFX"
+
+[node name="IncScore" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("92_k4rbn")
+volume_db = -20.0
+max_distance = 1e+10
+bus = &"SFX"
+
+[node name="IncScore2" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("93_8pra0")
+volume_db = -20.0
+max_distance = 1e+10
+bus = &"SFX"
+
+[node name="ButtonClick" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("93_s23e3")
+volume_db = 5.0
+max_distance = 1e+10
+bus = &"SFX"
+
+[connection signal="pressed" from="Menu/Resume" to="Menu" method="_on_resume_pressed"]
+[connection signal="timeout" from="SFX/Timer" to="." method="_on_sfx_timer_timeout"]
+[connection signal="timeout" from="SFX/Timer2" to="." method="_on_timer_2_timeout"]

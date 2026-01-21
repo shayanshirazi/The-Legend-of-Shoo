@@ -1,0 +1,514 @@
+[gd_scene load_steps=22 format=3 uid="uid://bfcyi24564bly"]
+
+[ext_resource type="Script" path="res://Scripts/plot_story.gd" id="1_bcr5e"]
+[ext_resource type="Texture2D" uid="uid://c71d84gbq1byf" path="res://Assets/plot_background.png" id="1_eh3pj"]
+[ext_resource type="FontFile" uid="uid://dvhuitwjsd3ow" path="res://Fonts/JungleAdventurer.ttf" id="3_5afn8"]
+[ext_resource type="Texture2D" uid="uid://dhd80ycj0komd" path="res://Assets/logo.png" id="3_fakbr"]
+[ext_resource type="AudioStream" uid="uid://cxj6csd0ii1da" path="res://Assets/Music/legend_of_shoo.wav" id="4_agkxe"]
+[ext_resource type="AudioStream" uid="uid://bd5fxg0s8w608" path="res://Assets/Music/shoo_bg.mp3" id="5_eom6a"]
+[ext_resource type="Texture2D" uid="uid://cdaixbas870a" path="res://Assets/Menu/resume_button.png" id="6_aaba0"]
+[ext_resource type="AudioStream" uid="uid://dnkf6a7eo6vnw" path="res://Assets/Music/button_click.mp3" id="7_f84p6"]
+[ext_resource type="AudioStream" uid="uid://cyavr53uhcv1h" path="res://Assets/Music/plot_story.mp3" id="9_rwb47"]
+[ext_resource type="Texture2D" uid="uid://di3rjbbps6dwk" path="res://Assets/Menu/skip_button.png" id="10_qp3iv"]
+[ext_resource type="Texture2D" uid="uid://crip15jrmpnee" path="res://Assets/Menu/faster.png" id="11_1rsbn"]
+[ext_resource type="Texture2D" uid="uid://s7dfdrcmrl8d" path="res://Assets/Menu/slower.png" id="12_12t7v"]
+
+[sub_resource type="Animation" id="Animation_j2ghb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Background:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(960, 363)]
+}
+
+[sub_resource type="Animation" id="Animation_4rvot"]
+resource_name = "background"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.5, 0.5), Vector2(0.29, 0.29)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Background:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(960, 363), Vector2(209, 363)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n4tml"]
+_data = {
+"RESET": SubResource("Animation_j2ghb"),
+"background": SubResource("Animation_4rvot")
+}
+
+[sub_resource type="Animation" id="Animation_bahnl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GameTitle:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CreatorName:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CreatorName:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("StartButton:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Logo:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_m46xf"]
+resource_name = "start"
+length = 5.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GameTitle:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.3, 2.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CreatorName:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3, 2.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CreatorName:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3.26667, 4.93333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("StartButton:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 5.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Logo:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_78mlc"]
+_data = {
+"RESET": SubResource("Animation_bahnl"),
+"start": SubResource("Animation_m46xf")
+}
+
+[sub_resource type="Animation" id="Animation_464wg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StoryPlot:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SkipButton:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DoubleSpeedButton:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_5sjy2"]
+resource_name = "plot_story"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StoryPlot:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SkipButton:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DoubleSpeedButton:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rqssv"]
+_data = {
+"RESET": SubResource("Animation_464wg"),
+"plot_story": SubResource("Animation_5sjy2")
+}
+
+[node name="PlotStory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bcr5e")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(960, 363)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_eh3pj")
+
+[node name="Logo" type="Sprite2D" parent="."]
+visible = false
+z_index = 100
+position = Vector2(573, 135)
+scale = Vector2(0.116667, 0.116667)
+texture = ExtResource("3_fakbr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_n4tml")
+}
+speed_scale = 0.01
+
+[node name="CreatorName" type="RichTextLabel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -399.0
+offset_top = -31.0
+offset_right = 399.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0.603922, 0.65098, 0.811765, 1)
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_offset_x = -1
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/normal_font = ExtResource("3_5afn8")
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
+text = "[center]Created with  ♡  by Shayan [/center]"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="StoryPlot" type="RichTextLabel" parent="."]
+z_index = 4096
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 65.0
+offset_top = 1.0
+offset_right = -64.0
+offset_bottom = -56.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0.538608, 0.589553, 0.767621, 1)
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_outline_size = 4
+theme_override_constants/line_separation = 30
+theme_override_fonts/normal_font = ExtResource("3_5afn8")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "
+
+
+
+
+
+
+
+
+Once upon a time, in a lost city above the skies known as Elgimore, lived Shoo ... A fearless ninja who, in his imagination, pictured himself as the conqueror of the world.
+
+But there is a limit to imagination, and everything changed when he fell in love with Elgimore’s princess ...         
+
+The king proposed a challenge to him so he could prove his capability and responsibility for having his daughter. He called this trial “The 200 Pillars of Destiny”
+
+In the challenge, stones are raining from the sky, missiles are launched toward him, and bombs will fall off his head constantly. Surviving 200 pillars is not easy, but it is everything that the little Shoo of our story desires in his life. 
+
+The question is ... can you help him make his dream life with the princess come true?
+
+A quick guide:
+   ⦾ Move: Use the arrow keys or WASD
+   ⦾ Jump: Press Space, the Up Arrow, or W
+   ⦾ Mute/Unmute Sound: Press M
+   ⦾ Open Menu: Press Esc
+
+Good luck, Shoo's destiny is now in your hands …
+"
+scroll_active = false
+scroll_following = true
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="GameTitle" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -577.0
+offset_top = -113.0
+offset_right = 578.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0.603922, 0.65098, 0.811765, 1)
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_offset_x = -2
+theme_override_constants/shadow_outline_size = 4
+theme_override_fonts/normal_font = ExtResource("3_5afn8")
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+text = "[center]The Legend of Shoo[/center]"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="TitleAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_78mlc")
+}
+autoplay = "start"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_agkxe")
+volume_db = 10.0
+autoplay = true
+
+[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_eom6a")
+volume_db = -5.0
+autoplay = true
+
+[node name="StartButton" type="TextureButton" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.0
+offset_top = 93.0
+offset_right = 438.0
+offset_bottom = 605.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("6_aaba0")
+
+[node name="ClickButton" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_f84p6")
+volume_db = 20.0
+max_distance = 1e+10
+bus = &"SFX"
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Story" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_rqssv")
+}
+speed_scale = 0.025
+
+[node name="StorySound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_rwb47")
+volume_db = 13.0
+
+[node name="SkipButton" type="TextureButton" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = -85.0
+offset_right = 515.0
+offset_bottom = 427.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.14, 0.14)
+texture_normal = ExtResource("10_qp3iv")
+
+[node name="DoubleSpeedButton" type="TextureButton" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -82.0
+offset_top = -90.0
+offset_right = 430.0
+offset_bottom = 422.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.15, 0.15)
+toggle_mode = true
+texture_normal = ExtResource("11_1rsbn")
+texture_pressed = ExtResource("12_12t7v")
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="animation_finished" from="Story" to="." method="_on_story_animation_finished"]
+[connection signal="pressed" from="SkipButton" to="." method="_on_skip_button_pressed"]
+[connection signal="pressed" from="DoubleSpeedButton" to="." method="_on_double_speed_button_pressed"]
