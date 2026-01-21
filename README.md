@@ -6,6 +6,37 @@
 
 ---
 
+## ⬇️ Download & Play
+Click the badges below to download the game for your platform via Itch.io:
+
+### 🟢 Normal Version
+<a href="https://joyful-shayan.itch.io/the-legend-of-shoo">
+  <img src="https://img.shields.io/badge/Download_Windows-Normal_Version-8A2BE2?style=for-the-badge&logo=windows&logoColor=white" />
+</a>
+<a href="https://joyful-shayan.itch.io/the-legend-of-shoo">
+  <img src="https://img.shields.io/badge/Download_Mac-Normal_Version-8A2BE2?style=for-the-badge&logo=apple&logoColor=white" />
+</a>
+<a href="https://joyful-shayan.itch.io/the-legend-of-shoo">
+  <img src="https://img.shields.io/badge/Download_Linux-Normal_Version-8A2BE2?style=for-the-badge&logo=linux&logoColor=white" />
+</a>
+
+### 🔴 Deadly Version
+<a href="https://joyful-shayan.itch.io/the-legend-of-shoo">
+  <img src="https://img.shields.io/badge/Download_Windows-Deadly_Version-b30000?style=for-the-badge&logo=windows&logoColor=white" />
+</a>
+<a href="https://joyful-shayan.itch.io/the-legend-of-shoo">
+  <img src="https://img.shields.io/badge/Download_Mac-Deadly_Version-b30000?style=for-the-badge&logo=apple&logoColor=white" />
+</a>
+<a href="https://joyful-shayan.itch.io/the-legend-of-shoo">
+  <img src="https://img.shields.io/badge/Download_Linux-Deadly_Version-b30000?style=for-the-badge&logo=linux&logoColor=white" />
+</a>
+
+<br />
+
+> **👉 [Play directly in your Browser on Itch.io](https://joyful-shayan.itch.io/the-legend-of-shoo)**
+
+---
+
 ## 🎮 About the Game
 You play as a ninja on a mission to prove your worth. Your goal? Survive **200 pillars**. It sounds simple, but with increasing difficulty and chaos, only the best can make it to the end.
 
